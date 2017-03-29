@@ -1,7 +1,8 @@
 require './app'
 require_relative 'bot'
-require ‘facebook/messenger’
-include Facebook::Messenger
+require 'facebook/messenger'
+
+#include Facebook::Messenger
 
 # run both Sinatra and facebook-messenger on /webhook
 map("/webhook") do
@@ -10,4 +11,4 @@ map("/webhook") do
 end
 
 # run regular sinatra for other paths (in case you ever need it)
-run Sinatra::Application 
+run Sinatra::Application
